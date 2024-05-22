@@ -86,7 +86,7 @@ def optimize_playlist(df: pd.DataFrame) -> pd.DataFrame:
   while len(song_ids) < len(df):
     next_transition = transitions_df[transitions_df["from_song"] == current_song_id]
     next_transition = next_transition[~next_transition["to_song"].isin(song_ids)]
-    next_song_id = next_transition.sort_values(by="score").iloc[0]["to_song"]
+    next_song_id = next_transition.sort_values(by="score", ascending=False).iloc[0]["to_song"]
     song_ids.append(next_song_id)
     current_song_id = next_song_id
 
