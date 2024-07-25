@@ -1,5 +1,5 @@
 # spotify-mix-optimizer
-My tool will automatically compute an optimal DJ mix (song transitions) for your Spotify playlist. 
+My tool analyzes the audio features of songs in a Spotify playlist and uses a scoring algorithm to compute the ideal track sequence for transitions between songs. It will also automatically create a new playlist on your account with the optimal order. 
 
 Initially, I was only using least BPM differences and least musical key differences between songs, but now my algorithm also makes use of several other audio feature datapoints available through the Spotify track API, including: 
 - tempo (BPM)
